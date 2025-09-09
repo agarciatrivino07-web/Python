@@ -27,9 +27,10 @@ def calculadora(num1, num2, opcion):
         else: 
             print(f"El resultado de la division es: {num1 / num2}")
         continuar = input("¿Quieres realizar otra operacion (si/no):").lower() 
+        if continuar != "no":
+            return 0;
         if continuar != "si":
             print("¡Gracias por usar la calculadora! Hasta luego.")
-
         while True:
             num2 = input("Pon un numero")
             # Solicitamos la entrada al usuario
@@ -39,7 +40,6 @@ def calculadora(num1, num2, opcion):
                 break
             else:
                 print("Entrada invalida, solo admite numeros")
-    
     
     else: 
         print('Te equivocaste de opcion')
