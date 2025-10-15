@@ -43,20 +43,6 @@ def calculadora (num1, num2, opcion):
         
         if si:
             calculadora(num1, num2, opcion)
-        
-
-        """else:
-            while True:
-                num2 = input("Pon un numero")
-                # Solicitamos la entrada al usuario
-                if num2.isdigit():
-                    num2 = int(opcion)
-                    print(f"Numero invalido: {opcion}")
-                    break
-            else:
-                print("Entrada invalida, solo admite números")
-        """
-
     else: 
         print('Te equivocaste de opcion')
 
