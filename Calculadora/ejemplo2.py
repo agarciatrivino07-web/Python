@@ -6,16 +6,24 @@
 (4) división
 (5) raíz cuadrada
 """
-
+print(f'=== Menú ===')
 print(f'Bienvenido a la calculadora de Axel, espero que cumpla su función' .center(60,'-'))
-print(f'Opcion 1 Suma',('\n'),'Opcion 2 Resta',('\n'),'Opcion 3 Multiplicación',('\n'),'Opcion 4 Division',('\n'),'Opcion 5 Raiz cuadrada')
+print(f'Opcion 1 Suma',('\n'),'Opcion 2 Resta',('\n'),'Opcion 3 Multiplicación',('\n'),'Opcion 4 Division',('\n'))
 
-variable1 = int(input('Primer valor''\n'))
-variable2 = int(input('Segundo valor''\n'))
+try:
+    variable1 = int(input('Primer valor''\n'))
+    variable2 = int(input('Segundo valor''\n'))
+except ValueError:
+    print(f'Solo admite números')
 
 def calculadora (num1, num2, opcion):
 
-    opcion = int(input("Elige una opcion" '\n'))
+    try:
+        opcion = int(input("Elige una opcion"))
+    except ValueError:
+        print(f'Solo admite números')
+
+
     if opcion == 1:
         print(f'El resultado de la suma de {num1} + {num2}: {num1 + num2}')
         continuar = input("¿Quieres seguir utilizando el servicio? (si/no)")
@@ -44,9 +52,6 @@ def calculadora (num1, num2, opcion):
         else:
             print(f'Introduce los valores')
             calculadora(num1, num2,opcion)
-
-    elif opcion == 5:
-        print(f'El resultado de la raiz cuadrada es {num1} y {num1} : {num1 / 2}')
     elif opcion == 4: 
         if num2 == 0:
             print("Error: No se puede dividir  entre cero. ")
@@ -68,5 +73,5 @@ def calculadora (num1, num2, opcion):
         print(f'Inserta otra vez la opción deseada')
         calculadora(num1, num2,opcion)
 
-calculadora(variable1,variable2,2,)
+calculadora(variable1,variable2,2)
 print('Finalizada la operación, gracias por utilizar mi servicio')
