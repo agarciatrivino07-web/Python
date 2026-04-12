@@ -1,7 +1,7 @@
 # 🧮 Python Calculator
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![License](https://img.shields.io/badge/license-MIT-green)
+
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
 
 Una calculadora sencilla, elegante y funcional construida íntegramente en **Python**. Ideal para realizar operaciones matemáticas básicas con un manejo de errores robusto.
